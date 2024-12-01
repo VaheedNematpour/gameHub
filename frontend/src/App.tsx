@@ -9,7 +9,15 @@ function App() {
       <header className="px-8 py-12">
         <NavBar isDark={dark} setDark={() => setDark(!dark)} />
       </header>
-      <main></main>
+
+      <main className="lg:grid lg:grid-cols-8">
+        <section className="px-4 py-2 hidden lg:flex">
+          <h2>Genres</h2>
+        </section>
+        <section className="col-span-7 px-4 py-2">
+          <h2>Games</h2>
+        </section>
+      </main>
     </div>
   );
 }
