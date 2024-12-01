@@ -20,6 +20,6 @@ class PlatformAdmin(admin.ModelAdmin):
 class GameAdmin(admin.ModelAdmin):
     list_display = ['id', 'title', 'category', 'score']
     list_editable = ['score']
-    list_filter = ['category', 'platfroms']
+    list_filter = ['category', 'platforms']
     list_per_page = 10
     search_fields = ['title__startswith']

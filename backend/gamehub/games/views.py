@@ -68,7 +68,7 @@ def platform_detail(request, id):
 
 @api_view()
 def game_list(request):
-    games = Game.objects.prefetch_related('platfroms').select_related('category').all()
+    games = Game.objects.prefetch_related('platforms').select_related('category').all()
     serializer = GameSerializer(games, many=True)
 
     return Response(serializer.data)

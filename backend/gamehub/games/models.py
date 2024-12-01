@@ -19,5 +19,5 @@ class Game(models.Model):
     title = models.CharField(max_length=255)
     category = models.ForeignKey(Category, on_delete=models.PROTECT)
     score = models.PositiveSmallIntegerField()
-    platfroms = models.ManyToManyField(Platform)
+    platforms = models.ManyToManyField(Platform)
 

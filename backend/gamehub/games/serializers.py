@@ -16,8 +16,8 @@ class PlatformSerializer(serializers.ModelSerializer):
 
 class GameSerializer(serializers.ModelSerializer):
     category = CategorySerializer()
-    platfroms = PlatformSerializer(many=True)
+    platforms = PlatformSerializer(many=True)
 
     class Meta:
         model = Game
-        fields = ['id', 'title', 'category', 'platfroms']
+        fields = ['id', 'title', 'category', 'platforms']
