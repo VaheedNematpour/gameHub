@@ -16,7 +16,7 @@ function App() {
           <h2>Genres</h2>
         </section>
         <section className="col-span-7 px-4 py-2">
-          <GameList />
+          <GameList isDark={dark} />
         </section>
       </main>
     </div>
