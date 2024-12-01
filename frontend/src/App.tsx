@@ -1,5 +1,6 @@
 import { useState } from "react";
 import NavBar from "./components/NavBar";
+import GameList from "./components/gamehub/GameList";
 
 function App() {
   const [dark, setDark] = useState(true);
@@ -15,7 +16,7 @@ function App() {
           <h2>Genres</h2>
         </section>
         <section className="col-span-7 px-4 py-2">
-          <h2>Games</h2>
+          <GameList />
         </section>
       </main>
     </div>
