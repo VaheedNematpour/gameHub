@@ -2,7 +2,7 @@ import { useState } from "react";
 import NavBar from "./components/NavBar";
 
 function App() {
-  const [dark, setDark] = useState(false);
+  const [dark, setDark] = useState(true);
 
   return (
     <div className={`h-screen ${dark ? "bg-gray-800" : "bg-gray-100"}`}>
