@@ -10,5 +10,9 @@ urlpatterns = [
     # Platform
     path('platforms/', views.platform_list),
     path('platforms/<int:id>/', views.platform_detail),
+
+    # game
+    path('list/', views.game_list),
+    path('list/<int:id>/', views.game_detail)
 ]
 
