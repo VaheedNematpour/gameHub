@@ -1,3 +1,5 @@
+import { FaPlaystation, FaWindows, FaXbox } from "react-icons/fa";
+
 interface Props {
   platform: string;
 }
@@ -5,9 +7,9 @@ interface Props {
 function PlatformIcon({ platform }: Props) {
   return (
     <>
-      {platform.toLowerCase() === "playstation" && <p>P</p>}
-      {platform.toLowerCase() === "xbox" && <p>X</p>}
-      {platform.toLowerCase() === "pc" && <p>PC</p>}
+      {platform.toLowerCase() === "playstation" && <FaPlaystation />}
+      {platform.toLowerCase() === "xbox" && <FaXbox />}
+      {platform.toLowerCase() === "pc" && <FaWindows />}
     </>
   );
 }
