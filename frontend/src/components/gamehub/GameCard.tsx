@@ -13,7 +13,7 @@ function GameCard({ game }: Props) {
           <h3>{game.title}</h3>
         </header>
 
-        <hr className="w-1/3 mx-auto my-3" />
+        <hr className="w-1/3 mx-auto border-gray-300 my-3 rounded" />
 
         <main>
           <ul>
