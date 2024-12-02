@@ -1,6 +1,7 @@
 import { useState } from "react";
 import NavBar from "./components/NavBar";
 import GameList from "./components/gamehub/GameList";
+import CategoryList from "./components/gamehub/CategoryList";
 
 function App() {
   const [dark, setDark] = useState(true);
@@ -13,7 +14,7 @@ function App() {
 
       <main className="lg:grid lg:grid-cols-8">
         <section className="px-4 py-2 hidden lg:flex">
-          <h2>Genres</h2>
+          <CategoryList isDark={dark} />
         </section>
         <section className="col-span-7 px-4 py-2">
           <GameList isDark={dark} />
