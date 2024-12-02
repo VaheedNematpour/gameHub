@@ -1,3 +1,5 @@
+import logo from "../assets/logo.webp";
+
 interface Props {
   isDark: boolean;
   setDark: () => void;
@@ -7,13 +9,7 @@ function NavBar({ isDark, setDark }: Props) {
   return (
     <>
       <nav className="flex items-center justify-between space-x-4">
-        <h1
-          className={`text-2xl ${
-            isDark ? "text-gray-300" : "text-gray-800"
-          } font-medium xl:text-3xl`}
-        >
-          Gamehub
-        </h1>
+        <img src={logo} alt="web page logo" className="w-16" />
 
         <input
           type="text"
