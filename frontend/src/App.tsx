@@ -16,6 +16,7 @@ function App() {
         <section className="px-4 py-2 hidden lg:flex">
           <CategoryList isDark={dark} />
         </section>
+
         <section className="col-span-7 px-4 py-2">
           <GameList isDark={dark} />
         </section>

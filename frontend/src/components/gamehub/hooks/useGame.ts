@@ -1,9 +1,15 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
+export interface Platform {
+  id: number;
+  title: string;
+}
+
 export interface Game {
   id: number;
   title: string;
+  platforms: Platform[];
 }
 
 const useGame = () => {

@@ -11,7 +11,15 @@ function GameCard({ game }: Props) {
         <header>
           <h3>{game.title}</h3>
         </header>
-        <main></main>
+        <main>
+          <ul>
+            {game.platforms.map((platform) => (
+              <li key={platform.id} className="inline-block px-1">
+                {platform.title}
+              </li>
+            ))}
+          </ul>
+        </main>
       </section>
     </>
   );
