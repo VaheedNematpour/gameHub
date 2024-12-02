@@ -10,6 +10,7 @@ export interface Game {
   id: number;
   title: string;
   platforms: Platform[];
+  score: number;
 }
 
 const useGame = () => {
