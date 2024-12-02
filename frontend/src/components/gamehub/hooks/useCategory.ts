@@ -13,6 +13,9 @@ function useCategory() {
       axios
         .get("http://localhost:8000/games/categories/")
         .then((res) => res.data),
+
+    staleTime: 10 * 1000,
+    keepPreviousData: true,
   });
 }
 

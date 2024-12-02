@@ -13,6 +13,9 @@ const useGame = () => {
       axios
         .get<Game[]>("http://localhost:8000/games/list/")
         .then((res) => res.data),
+
+    staleTime: 10 * 1000,
+    keepPreviousData: true,
   });
 };
 
