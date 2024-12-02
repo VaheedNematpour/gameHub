@@ -1,4 +1,5 @@
 import logo from "../assets/logo.webp";
+import { CiDark, CiLight } from "react-icons/ci";
 
 interface Props {
   isDark: boolean;
@@ -19,11 +20,11 @@ function NavBar({ isDark, setDark }: Props) {
 
         <button
           onClick={setDark}
-          className={`text-lg ${
+          className={`text-xl ${
             isDark ? "text-gray-300" : "text-gray-800"
-          } xl:text-xl`}
+          } xl:text-2xl`}
         >
-          {isDark ? "Set Light" : "Set Dark"}
+          {isDark ? <CiLight /> : <CiDark />}
         </button>
       </nav>
     </>
