@@ -15,15 +15,20 @@ function GameList({ isDark }: Props) {
       <h2
         className={`text-3xl ${
           isDark ? "text-gray-300" : "text-gray-800"
-        } font-medium xl:text-4xl`}
+        } font-medium mb-3 xl:text-4xl`}
       >
         Games
       </h2>
 
-      <ul>
+      <ul className="grid md:grid-cols-2 lg:grid-cols-3">
         {data &&
           data.map((game) => (
-            <li className="grid grid-cols-3" key={game.id}>
+            <li
+              className={`px-3 text-lg ${
+                isDark ? "text-gray-300" : "text-gray-800"
+              } xl:text-xl`}
+              key={game.id}
+            >
               <GameCard game={game} />
             </li>
           ))}

@@ -7,7 +7,7 @@ interface Props {
 function GameCard({ game }: Props) {
   return (
     <>
-      <section className="max-w-sm bg-gray-700 px-3 py-2 rounded shadow-md">
+      <section className="bg-gray-700 px-3 py-2 rounded shadow-md">
         <header>
           <h3>{game.title}</h3>
         </header>
