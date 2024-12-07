@@ -35,7 +35,7 @@ function GameList({ isDark }: Props) {
         Games
       </h2>
 
-      <ul className="grid md:grid-cols-2 space-x-3 lg:grid-cols-3">
+      <ul className="grid md:grid-cols-2 space-x-3 my-3 lg:grid-cols-3">
         {data &&
           data.map((game) => (
             <li
