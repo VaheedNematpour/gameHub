@@ -5,7 +5,18 @@ interface Props {
 }
 
 function CategoryList({ isDark }: Props) {
-  const { data } = useCategory();
+  const { data, isLoading } = useCategory();
+
+  if (isLoading)
+    return (
+      <p
+        className={`text-xl ${
+          isDark ? "text-gray-300" : "text-gray-800"
+        } font-medium xl:text-2xl`}
+      >
+        Loading...
+      </p>
+    );
 
   return (
     <div className="flex-col">
