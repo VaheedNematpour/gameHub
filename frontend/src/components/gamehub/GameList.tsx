@@ -1,3 +1,4 @@
+import LoadingSkeleton from "../LoadingSkeleton";
 import GameCard from "./GameCard";
 import useGame from "./hooks/useGame";
 
@@ -6,9 +7,23 @@ interface Props {
 }
 
 function GameList({ isDark }: Props) {
-  const { data, error } = useGame();
+  const { data, error, isLoading } = useGame();
 
   if (error) return <p>{error.message}</p>;
+  if (isLoading)
+    return (
+      <ul className="grid md:grid-cols-2 space-x-3 lg:grid-cols-3">
+        <li>
+          <LoadingSkeleton />
+        </li>
+        <li>
+          <LoadingSkeleton />
+        </li>
+        <li>
+          <LoadingSkeleton />
+        </li>
+      </ul>
+    );
 
   return (
     <>
@@ -20,7 +35,7 @@ function GameList({ isDark }: Props) {
         Games
       </h2>
 
-      <ul className="grid md:grid-cols-2 lg:grid-cols-3">
+      <ul className="grid md:grid-cols-2 space-x-3 lg:grid-cols-3">
         {data &&
           data.map((game) => (
             <li
